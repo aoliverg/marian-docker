@@ -59,4 +59,4 @@ WORKDIR /root
 RUN mkdir marian-bin
 RUN cp $MARIANPATH/build/marian* ./marian-bin
 RUN cp $MARIANPATH/build/spm* ./marian-bin
-RUN rm -rf ./$MARIANPATH
+RUN rm -rf $MARIANPATH
