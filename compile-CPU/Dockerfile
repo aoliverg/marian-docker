@@ -65,8 +65,9 @@ RUN cmake .. -DCMAKE_BUILD_TYPE=Release -DUSE_STATIC_LIBS=on -DCOMPILE_SERVER=on
 
 WORKDIR /root
 
-RUN cp ./$MARIANPATH/build/marian* .
-RUN cp ./$MARIANPATH/build/spm* .
+RUN mkdir marian-bin
+RUN cp $MARIANPATH/build/marian* ./marian-bin
+RUN cp $MARIANPATH/build/spm* ./marian-bin
 RUN rm -rf ./$MARIANPATH
 
 
